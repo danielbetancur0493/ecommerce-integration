@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'ECOMMERCE INTEGRATION'),
 
     /*
     |--------------------------------------------------------------------------
@@ -159,7 +159,9 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-
+        
+        //Adicional
+        Laracasts\Flash\FlashServiceProvider::class
     ],
 
     /*

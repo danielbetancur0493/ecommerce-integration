@@ -6,7 +6,7 @@ use DB;
 
 class Transacciones extends Model{
     public function getTransacciones(){
-        return DB::table('transacciones')->where('transactionState','')->get();
+        return DB::table('transacciones')->where('transactionState','')->orWhere('transactionState','PENDING')->get();
     }
 
     public static function updateTransacciones($data,$id){

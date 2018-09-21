@@ -26,7 +26,10 @@
                 <td>{{$row->transactionState}}</td>
                 <td>{{$row->requestDate}}</td>
                 <td>{{$row->bankProcessDate}}</td>
-                <td></td>
+                <td>@if($row->transactionState == '' || $row->transactionState == 'PENDING')
+                <a href="{{$row->bankURL}}" class="btn btn-warning">IR A PSE</a>
+                    @endif
+                </td>
                 <tr>
                 @empty
                 <tr>

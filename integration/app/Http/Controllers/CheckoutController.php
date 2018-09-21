@@ -94,7 +94,12 @@ class CheckoutController extends Controller
             $transaccion->bankProcessDate='';
             $transaccion->transactionState='';
             $transaccion->save();
-            return redirect()->to($response->createTransactionResult->bankURL);
+            if($response->createTransactionResult->returnCode=='SUCCESS'){
+                return redirect()->to($response->createTransactionResult->bankURL);
+            }else {
+                Session::flash('warning','$response->createTransactionResult->responseReasonText');
+                return redirect('checkout/transaction/list');
+            }
         }else{
             Session::flash('warning','No existe el ID');
             return back()->withInput();

@@ -5,25 +5,25 @@ Integración simple de Ecommerce de pruebas con plataforma de pagos
  PHP SUPERIOR 7.0
  LARAVEL 1.4  
  
-##COMO EMPEZAR
+## COMO EMPEZAR
 En la raíz de la carpeta integration
 ```
 composer install
 ```
 terminado el proceso de instalación del vendor.
-###Variables de entorno y base de datos
+### Variables de entorno y base de datos
 configuramos las variables de entorno en el archivo .ENV para la conexión a la base de datos y creamos la base de datos integracion
 ```
 DB_DATABASE=integracion
 ```
 
-###Ejecutamos la migración
+### Ejecutamos la migración
 ```
 php artisan migrate
 ```
 
 
-##PROCESO
+## PROCESO DE PRUEBAS
 al ingresar en el navegador al proyecto se visualizará un producto, damos clic en comprar
 - se redirige a la pagina de checkout donde solicitará la información del usuario
 ```

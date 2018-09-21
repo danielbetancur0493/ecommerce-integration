@@ -1,9 +1,10 @@
 # ecommerce-integration
 Integración simple de Ecommerce de pruebas con plataforma de pagos
 ## Requisitos
- COMPOSER
- PHP SUPERIOR 7.0
- LARAVEL 1.4  
+ -COMPOSER
+ -PHP SUPERIOR 7.0
+ -LARAVEL 1.4  
+ -MySQL
  
 ## COMO EMPEZAR
 En la raíz de la carpeta integration

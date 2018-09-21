@@ -18,13 +18,16 @@ class PlaceToPay{
         return $this->servicio->getBankList(['auth'=>$this->auth]);
     }
     public function CreaTransaction($data){
-        return $this->servicio->createTransaction(['auth'=>$this->auth,
+        try{
+            return $this->servicio->createTransaction(['auth'=>$this->auth,
                                             'transaction'=>$data,
                                             ]);
+        }catch(SoapFault $fault){
+            return $fault->getMessage();
+        }
+        
     }
-    // public function CreaTransactionMultiCredit(){
-    //     $this->servicio->createTransactionMultiCredit();
-    // }
+    
     public function getTransaccion($id){
         return $this->servicio->getTransactionInformation(['auth'=>$this->auth,'transactionID'=>$id]);
     }

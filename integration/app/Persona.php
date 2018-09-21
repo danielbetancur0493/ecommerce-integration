@@ -1,21 +1,37 @@
 <?php namespace App;
 class Persona{
-private $bankCode = '';
-private $bankInterface = '';
-private $returnURL ='';
-private $reference = '';
-private $description= ''; 
-private $language='';
-private $currency='';
-private $totalAmount='';
-private $taxAmount='';
-private $devolutionBase='';
-private $tipAmount='';
-private $payer=array();
-private $buyer=array();
-private $shipping=array();
-private $ipAddress='';
-private $userAgent='';
+private $bankCode ;
+private $bankInterface ;
+private $returnURL ;
+private $reference ;
+private $description; 
+private $language;
+private $currency;
+private $totalAmount;
+private $taxAmount;
+private $devolutionBase;
+private $tipAmount;
+private $payer;
+private $buyer;
+private $shipping;
+private $ipAddress;
+private $userAgent;
+
+public function setInfo($data){
+    $this->bankCode=$data->bankCode;
+    $this->bankInterface=$data->bankInterface;
+    $this->returnURL=$data->returnURL;
+    $this->reference=$data->reference;
+    $this->description=$data->description;
+    $this->language=$data->language;
+    $this->currency=$data->currency;
+    $this->totalAmount=$data->totalAmount;
+    $this->taxAmount=$data->taxAmount;
+    $this->devolutionBase=$data->devolutionBase;
+    $this->tipAmount=$data->tipAmount;
+    $this->ipAddress=$data->ipAddress;
+    $this->userAgent=$data->userAgent;
+}
 
 public function setPayer($data){
     

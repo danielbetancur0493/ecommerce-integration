@@ -23,7 +23,7 @@
             <div class="form-group">
                     <label for="documentType">Tipo Documento</label>
                 <select class="form-control" name="documentType">
-                    <option>Seleccione una opción</option>
+                    <option value="0">Seleccione una opción</option>
                     <option value="CC">CC</option>
                     <option value="NIT">NIT</option>
                 </select>
@@ -58,7 +58,7 @@
             </div>
             </div>
             
-            <div class="col-md-8 col-xs-12">
+            <div class="col-md-4 col-xs-12">
                     <div class="form-group">
                             <label for="emailAddress">Dirección Email</label>
                     <input type="email" name="emailAddress" class="form-control" id="emailAddress" placeholder="Email" value="{{old('emailAddress')}}" required>
@@ -67,10 +67,16 @@
 
             <div class="col-md-4 col-xs-12">
             <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" class="form-control" id="password" placeholder="Password" required>
+                <label for="phone">Teléfono Fijo</label>
+                <input type="number" class="form-control" maxlength="15" name="phone" placeholder="Telefono fijo" required>
             </div>
             </div>
+            <div class="col-md-4 col-xs-12">
+                <div class="form-group">
+                    <label for="password">Teléfono Movil</label>
+                    <input type="number"  class="form-control" maxlength="20" name="mobile" placeholder="Telefono movil" required>
+                </div>
+                </div>
 
             <div class="col-md-6 col-xs-12">
             <div class="form-group">
@@ -86,19 +92,26 @@
             </div>
             </div>
 
-            <div class="col-md-6 col-xs-12">
+            <div class="col-md-4 col-xs-12">
             <div class="form-group">
                 <label for="city">Ciudad</label>
                 <input type="text" name="city" maxlength="60" class="form-control" placeholder="Ciudad" value="{{old('city')}}" required>
             </div>
             </div>
 
-            <div class="col-md-6 col-xs-12">
+            <div class="col-md-4 col-xs-12">
             <div class="form-group">
                 <label for="address">Dirección</label>
-            <input type="text" name="address" maxlength="70" class="form-control" placeholder="Dirección" value="{{old('address')}}" required>
+            <input type="text" name="address" maxlength="80" class="form-control" placeholder="Dirección" value="{{old('address')}}" required>
             </div>
             </div>
+
+            <div class="col-md-4 col-xs-12">
+                <div class="form-group">
+                    <label for="postalCode">Codigo Postal</label>
+                <input type="text" name="postalCode" maxlength="15" class="form-control" placeholder="Dirección" value="{{old('address')}}" required>
+                </div>
+                </div>
             
             <div class="col-xs-8">
                 <label for="bankCode">Banco</label>

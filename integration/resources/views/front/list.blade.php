@@ -8,6 +8,7 @@
               <th>ESTADO</th>
               <th>FECHA SOLICITUD</th>
               <th>FECHA PROCESADA</th>
+              <th>DESCRIPCIÓN</th>
               <th></th>
             </tr>
           </thead>
@@ -26,6 +27,7 @@
                 <td>{{$row->transactionState}}</td>
                 <td>{{$row->requestDate}}</td>
                 <td>{{$row->bankProcessDate}}</td>
+                <td><small>{{$row->ResponseReasonText}}</small></td>
                 <td>@if($row->transactionState == '' || $row->transactionState == 'PENDING')
                 <a href="{{$row->bankURL}}" class="btn btn-warning">IR A PSE</a>
                     @endif

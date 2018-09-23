@@ -20,3 +20,6 @@ Route::post('/checkout/payment',['as'=>'checkout.payment','uses'=>'CheckoutContr
 Route::get('checkout/transaction',['as'=>'checkout.transaction','uses'=>'CheckoutController@transaction']);
 
 Route::get('checkout/transaction/list',['as'=>'checkout.transaction.list','uses'=>'CheckoutController@list']);
+
+Route::get('listacache',['as'=>'listacache','uses'=>'FrontController@ListCache']);
+

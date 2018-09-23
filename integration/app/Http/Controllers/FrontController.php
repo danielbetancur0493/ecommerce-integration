@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Cache;
 use Laracasts\Flash\Flash;
 use Carbon\carbon;
 use App\Producto as Producto;
@@ -20,10 +21,8 @@ class FrontController extends Controller
     }
 
     public function cart($id){
-        
         $payment=new Payment();
         $bankList=$payment->BankList();
-        
         if(isset($id)){
             $result=Producto::getProductoById($id);
             return view('front.checkout',['result'=>$result,'bankList'=>$bankList]);
@@ -32,4 +31,16 @@ class FrontController extends Controller
             return redirect('/');
         }
     }
+
+    public function ListCache(){
+        if(Cache::has('BankList')){
+            $lista=Cache::get('BankList');    
+        }else{
+            $lista=[];
+        }
+        
+        
+        return view('front.cache',['datos'=>$lista]);
+    }
+
 }

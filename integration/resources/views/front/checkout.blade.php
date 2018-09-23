@@ -116,7 +116,7 @@
             <div class="col-xs-8">
                 <label for="bankCode">Banco</label>
                 <select name="bankCode" class="form-control">
-                    @foreach($bankList->getBankListResult->item as $row)
+                    @foreach($bankList as $row)
                         {{print("<option value='$row->bankCode'>$row->bankName</option>")}}
                     @endforeach
                 </select>

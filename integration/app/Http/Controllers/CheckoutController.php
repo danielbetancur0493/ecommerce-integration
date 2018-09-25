@@ -125,17 +125,12 @@ class CheckoutController extends Controller
                                                     ],$response[$i]->getTransactionInformationResult->transactionID);
             }
         }
-        
-        
-        return redirect('checkout/transaction/list');
-    }
-
-
-    public function list(){
-        $transaccion=new Transaccion();
         $items=$transaccion->get();
         return view('front.list',['items'=>$items]);
+        
     }
+
+
     
     
 }
